@@ -1,6 +1,6 @@
 $(document).ready(function () {
 	//canvas
-	var c = document.getElementById("game-board");
+	var c = $(".game-board")[0];
 	var ctx = c.getContext("2d");
 	var cellSize = 15;
 	var w = c.width / cellSize;
@@ -96,8 +96,8 @@ $(document).ready(function () {
 		//colision - game over
 		else if (x >= w || x < 0 || y < 0 || y >= h || checkCollision(x, y)) {
 			clearInterval(loop);
-			$("#game-over").show();
-			$("#final-score span").text(score);
+			$(".game-over").show();
+			$(".final-score span").text(score);
 			gameInProgress = false;
 		}
 		//move
@@ -135,12 +135,12 @@ $(document).ready(function () {
 	}
 
 	function updateScore() {
-		$("#score span").text(score);
+		$(".score span").text(score);
 	}
 
-	$("#settings-btn").click(function () {
+	$(".settings-btn").on("click", function () {
 		if (!gameInProgress) {
-			$("#settings-panel").slideToggle(150);
+			$(".settings-panel").slideToggle(150);
 			if (settingsOn) {
 				settingsOn = false;
 			}
@@ -150,23 +150,23 @@ $(document).ready(function () {
 		}
 	});
 
-	$("#ok-btn").click(function () {
+	$(".confirm-settings-btn").click(function () {
 		settingsOn = false;
-		$("#settings-panel").slideUp(150);
+		$(".settings-panel").slideUp(150);
 	});
 
-	$("#settings-panel i").click(function () {
+	$(".settings-panel i").click(function () {
 		var pressed = $(this);
 		var s;
 
-		$("#settings-panel i").removeClass("icon-selected");
+		$(".settings-panel i").removeClass("icon-selected");
 		pressed.addClass("icon-selected");
 
 		s = pressed.data("speed");
 		gameSpeed = speed[s];
 	});
 
-	$("#settings-panel .color li").click(function () {
+	$(".settings-panel .color li").click(function () {
 		var pressed = $(this);
 		var col;
 
@@ -175,10 +175,10 @@ $(document).ready(function () {
 
 		col = pressed.data("color");
 
-		if (pressed.parent(".color").is("#snake-color")) {
+		if (pressed.parent(".color").is(".snake-color")) {
 			snakeColor = color[col];
 		}
-		else if (pressed.parent(".color").is("#food-color")) {
+		else if (pressed.parent(".color").is(".food-color")) {
 			foodColor = color[col];
 		}
 	});

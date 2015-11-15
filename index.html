@@ -11,14 +11,14 @@
     </head>
     <body>
         <div class="container">
-			<div id="score">
+			<div class="score">
 				Score: <span>0</span>
 			</div>
 			
-			<div id="settings-btn"><i class="icon-cog"></i>Settings</div>
+			<div class="settings-btn"><i class="icon-cog"></i>Settings</div>
 			
-			<div id="settings-panel">
-				<form>
+			<div class="settings-panel">
+				<form class="settings-form">
 					<p>Speed</p>
 					<ul class="speed">
 						<li><i class="icon-bicycle icon-selected" data-speed="slow"></i></li>
@@ -26,34 +26,34 @@
 						<li><i class="icon-rocket" data-speed="fast"></i></li>
 					</ul>
 					<p>Snake color</p>
-					<ul id="snake-color" class="color">
+					<ul class="color snake-color">
 						<li class="yellow" data-color="yellow"></li>
 						<li class="orange" data-color="orange"></li>
 						<li class="green color-selected" data-color="green"></li>
 						<li class="blue" data-color="blue"></li>
 					</ul>
 					<p>Food color</p>
-					<ul id="food-color" class="color">
+					<ul class="color food-color">
 						<li class="yellow color-selected" data-color="yellow"></li>
 						<li class="orange" data-color="orange"></li>
 						<li class="green" data-color="green"></li>
 						<li class="blue" data-color="blue"></li>
 					</ul>
-					<button type="button" id="ok-btn">OK</button>
+					<button type="button" class="confirm-settings-btn">OK</button>
 				</form>
 			</div>
 
-			<canvas id="game-board" width="600" height="405">HTML5 Canvas not supported</canvas>
+			<canvas class="game-board" width="600" height="405">HTML5 Canvas not supported</canvas>
 
-			<div id="game-start" class="overlay">
+			<div class="game-start overlay">
 				<p>Welcome to Snake Game</p>
 				<p class="info">Navigation: arrows</p>
 				<p class="info">Press Enter to start</p>
 			</div>
 
-			<div id="game-over" class="overlay">
+			<div class=" game-over overlay">
 				<p>Game Over</p>
-				<p id="final-score">Your score: <span></span></p>
+				<p class="final-score">Your score: <span></span></p>
 				<p class="info">Press Enter to start again</p>
 			</div>
 

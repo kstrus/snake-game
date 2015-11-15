@@ -1,11 +1,6 @@
-* {
-	margin:  0;
-	padding: 0;
-}
-
 html {
-	font-size:  16px;
-	color:  #cccccc;
+	font-size: 16px;
+	color: #cccccc;
 }
 
 body {
@@ -15,80 +10,85 @@ body {
 	background: black;
 }
 
+body, div, p, ul, li {
+    margin: 0;
+	padding: 0;
+}
+
 li {
 	list-style: none;
 }
 
 .container {
-	position:  relative;
+	position: relative;
 	width: 602px;
 	margin: 150px auto 0 auto;
 }
 
-#score {
+.score {
 	font-size: 1.2em;
-	float:  left;
+	float: left;
 	padding-top: 5px;
 }
 
-#settings-btn {
-	float:  right;
+.settings-btn {
+	float: right;
 	padding-top: 5px;
 	cursor: pointer;
 	font-size: 1.2em;
 }
 
-#settings-panel {
+.settings-panel {
 	position: absolute;
 	top: 39px;
 	right: 1px;
 	background-image: url("../img/pattern.png");
 	width: 600px;
-	height:  403px;
+	height: 403px;
 	z-index: 100;
-	cursor:  default;
+	cursor: default;
 	display: none;
-	box-sizing:  border-box;
+	box-sizing: border-box;
 }
 
-#settings-panel form {
+.settings-form {
 	margin: 100px auto 0 auto;
-	width:  240px;
+	width: 240px;
 }
 
-#settings-panel i {
-	font-size:  1.2em;
+.settings-form i {
+	font-size: 1.2em;
 	color: #666;
 }
 
-#settings-panel ul {
-	margin-bottom:  10px;
+.settings-form ul {
+	margin-bottom: 10px;
 }
 
-#settings-panel p {
-	float:  left;
+.settings-form p {
+	float: left;
 	width: 100px;
 	text-align: right;
 	margin-right: 10px;
 }
 
-#settings-panel p:first-child {
+.settings-form p:first-child {
 	padding-top: 4px;
 }
 
-#settings-panel li {
+.settings-form li {
 	display: inline-block;
-	margin-left:  10px;
+	margin-left: 10px;
 }
 
-#settings-panel .color li {
-	width:  14px;
-	height:  14px;
+.settings-form .color li {
+	width: 14px;
+	height: 14px;
 }
 
-#ok-btn {
+.confirm-settings-btn {
 	width: 100%;
-	margin-top:  40px;
+	margin-top: 40px;
 	padding: 8px 0;
 }
 
@@ -108,50 +108,48 @@ li {
 	background: #0094ff;
 }
 
-.icon-selected {
-	color: #fcfcfc !important;
+.settings-form .icon-selected {
+	color: #fcfcfc;
 }
 
 .color-selected {
 	background-image: url("../img/ok.png");
-	background-position:  center center;
+	background-position: center center;
 	background-repeat: no-repeat;
 }
 
-#game-board {
-	border:  1px solid #fff;
-	margin-top:  5px;
+.game-board {
+	border: 1px solid #fff;
+	margin-top: 5px;
 }
 
 .overlay {
 	position: absolute;
 	text-align: center;
-	top:  145px;
+	top: 145px;
 	width: 400px;
 	left: 50%;
 	margin-left: -200px;
-	font-size:  1.8em;
-	color:  #ffffff;
+	font-size: 1.8em;
+	color: #ffffff;
 	padding: 10px;
 	background: rgba(163,73,164,0.75);
 	border-radius: 5px;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	box-sizing:  border-box;
+	box-sizing: border-box;
 }
 
 .overlay .info {
 	font-size: 0.6em;
 }
 
-#game-start p:first-child {
-	margin-bottom:  20px;
+.game-start p:first-child {
+	margin-bottom: 20px;
 }
 
-#game-over {
-	display:  none;
+.game-over {
+	display: none;
 }
 
-#game-over #final-score {
+.game-over .final-score {
 	margin-bottom: 10px;
 }
